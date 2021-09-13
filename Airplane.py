@@ -6,11 +6,13 @@ class Airplane(ABC):
     def __init__(self) -> None:
         self.__IdentityCode = None;
     
-    def SetIdentityCode(self,ID):
-        self.__IdentityCode = ID;
-    
-    def GetIdentityCode(self):
+    @property
+    def IdentityCode(self):
         return self.__IdentityCode;
+    @IdentityCode.setter
+    def IdentityCode(self,ID):
+        self.__IdentityCode = ID;
+
 
     @abstractclassmethod
     def SetCapacity(self):
@@ -21,5 +23,5 @@ class Airplane(ABC):
         pass;
 
     def PrintInfo(self):
-        print('{:<15}'.format('Identity Code'),'{:<5}'.format(':'),self.__IdentityCode);
+        print('{:<25}'.format('Identity Code'),'{:<5}'.format(':'),self.__IdentityCode);
 

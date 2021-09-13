@@ -10,7 +10,7 @@ class CargoPlane(Airplane):
     @classmethod
     def CargoPlane_main_Constructor(self,id,cap):
         BuildClass = CargoPlane();
-        BuildClass.SetIdentityCode(id);
+        BuildClass.IdentityCode=id;
         BuildClass.SetCapacity(cap);
         return BuildClass;
     # ------------------------------
@@ -22,4 +22,4 @@ class CargoPlane(Airplane):
     # ------------------------------
     def PrintInfo(self):
         Airplane.PrintInfo(self);
-        print('{:<15}'.format('Capacity'),'{:<5}'.format(':'),self.__Capacity,'Ton(s)');
+        print('{:<25}'.format('Capacity'),'{:<5}'.format(':'),self.__Capacity,'Ton(s)');

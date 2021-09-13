@@ -10,7 +10,7 @@ class Airliner(Airplane):
     @classmethod
     def Airliner_main_Constructor(self,id,capacity):
         BuiltClass = Airliner();
-        BuiltClass.SetIdentityCode(id);
+        BuiltClass.IdentityCode=id;
         BuiltClass.SetCapacity(capacity)
         return BuiltClass;
    
@@ -22,4 +22,4 @@ class Airliner(Airplane):
 
     def PrintInfo(self):
         Airplane.PrintInfo(self);
-        print('{:<15}'.format('Capacity'),'{:<5}'.format(':'),self.__Capacity,'Person');
+        print('{:<25}'.format('Capacity'),'{:<5}'.format(':'),self.__Capacity,'Person');

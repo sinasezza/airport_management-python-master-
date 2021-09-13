@@ -43,6 +43,6 @@ class Pilot(ABC):
         pass;
 
     def PrintInfo(self):
-        print('{:<25}'.format('Identity Code'),'{:<5}'.format(':'),self.__IdentityCode);
-        print('{:<25}'.format('Last Name'),'{:<5}'.format(':'),self.__LastName);
-        print('{:<25}'.format('Age'),'{:<5}'.format(':'),self.__Age);
+        print('{:<25}'.format('Identity Code'),'{:<5}'.format(':'),self.IdentityCode);
+        print('{:<25}'.format('Last Name'),'{:<5}'.format(':'),self.LastName);
+        print('{:<25}'.format('Age'),'{:<5}'.format(':'),self.Age);
