@@ -23,4 +23,4 @@ class ProfessionalPilot(Pilot):
     # ----------------------------------
     def PrintInfo(self):
         Pilot.PrintInfo(self);
-        print('{:<25}'.format('Professional Degreee'),'{:<5}'.format(':'),self.__ProfessionalDegree);
+        print('{:<25}'.format('Professional Degree'),'{:<5}'.format(':'),self.__ProfessionalDegree);

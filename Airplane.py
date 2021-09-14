@@ -24,4 +24,3 @@ class Airplane(ABC):
     # -----------------------------
     def PrintInfo(self):
         print('{:<25}'.format('Identity Code'),'{:<5}'.format(':'),self.__IdentityCode);
-

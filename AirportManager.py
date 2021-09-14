@@ -1,4 +1,3 @@
-from Airplane import Airplane
 from os import  remove, system, name;
 import sys
 
@@ -21,7 +20,7 @@ class AirportManager:
 
     @staticmethod
     def Clear():
-    # for windows
+        # for windows
         if name == 'nt':
             _ = system('cls')
 
@@ -35,7 +34,7 @@ class AirportManager:
     # ------------------------------------------------------
     def AddFlight(self):
         self.Clear();
-        if( len(self.flight) > self.__NumberOFFlights):
+        if( len(self.flight) >= self.__NumberOFFlights):
             print("We Reach the Maximum Number  of Flights...");
         else:
             origin = input("enter Origin : ");
@@ -65,7 +64,7 @@ class AirportManager:
     # ------------------------------------------------------
     def AddAirplane(self):
         self.Clear();
-        if( len(self.airplane) > self.__NumberOfAirplanes):
+        if( len(self.airplane) >= self.__NumberOfAirplanes):
             print("We Reach the Maximum Number  of Airplanes...");
         else:
             TypeNum = int(input("enter type of Airplane [1 for Cargo,2 for Airliner] : "));
@@ -79,7 +78,7 @@ class AirportManager:
             elif (TypeNum == 2):
                 capacity = int(input("enter Maximum number of passangers (capacity) : "));
                 self.Clear();
-                self.airplane.append(CargoPlane(identity_code,capacity));
+                self.airplane.append(Airliner(identity_code,capacity));
                 print("\t\t<your Airplane>");
                 self.airplane[-1].PrintInfo();
     # ------------------------------------------------------
@@ -97,7 +96,7 @@ class AirportManager:
     # ------------------------------------------------------
     def AddPilot(self):
         self.Clear();
-        if(len(self.pilot) > self.__NumberOFPilots):
+        if(len(self.pilot) >= self.__NumberOFPilots):
             print("We Reach the Maximum Number  of Pilots...");
         else:
             TypeNum = int(input("enter type of Pilot [1 for Rookie,2 for Professional] : "));
