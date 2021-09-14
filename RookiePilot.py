@@ -3,19 +3,11 @@ from Pilot import Pilot;
 class RookiePilot(Pilot):
 
     #default initializer
-    def __init__(self) -> None:
-        super().__init__()
-        self.__NumberOfFlights = None;
-    # ----------------------------------
-    @classmethod
-    def RookiePilot_main_Constructor(self,lname,id,age):
-        BuildClass = RookiePilot();
-        BuildClass.LastName = lname;
-        BuildClass.IdentityCode = id;
-        BuildClass.Age=age;
-        return BuildClass;
-    # ----------------------------------
-        
+    def __init__(self,Lname,id,age,FlightNum) -> None:
+        super().__init__(Lname,id,age)
+        self.__NumberOfFlights = FlightNum;
+   
+    # ----------------------------------     
     def GetProfessionalDegree(self):
         raise NotImplemented;
     

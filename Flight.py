@@ -1,22 +1,13 @@
 
 class Flight():
     # default constructor
-    def __init__(self) -> None:
-        super().__init__();
-        self.__Origin = None;
-        self.__Destination = None;
-        self.__AirplaneIdentityCode = None;
-        self.__PilotIdentityCode=None;
-    # -------------------------------------------  
-    @classmethod
-    def Flight_main_Constructor(self,origin,destination,airplane_id,pilot_id):
-        BuiltClass = Flight();
-        BuiltClass.Origin=origin;
-        BuiltClass.Destination=destination;
-        BuiltClass.AirPlaneIdentityCode=airplane_id;
-        BuiltClass.PilotIdentityCode=pilot_id;
-        return BuiltClass;
-    # -------------------------------------------     
+    def __init__(self,origin,destination,airplane_id,pilot_id) -> None:
+        self.__Origin = origin;
+        self.__Destination = destination;
+        self.__AirplaneIdentityCode = airplane_id;
+        self.__PilotIdentityCode=pilot_id;
+    
+    # -------------------------------------------      
     @property
     def Origin(self):
         return self.__Origin;

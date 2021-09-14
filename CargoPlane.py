@@ -3,16 +3,10 @@ from Airplane import Airplane;
 class CargoPlane(Airplane):
     
     #default constructor:
-    def __init__(self) -> None:
-        super().__init__();
-        self.__Capacity = None;
-    # ------------------------------
-    @classmethod
-    def CargoPlane_main_Constructor(self,id,cap):
-        BuildClass = CargoPlane();
-        BuildClass.IdentityCode=id;
-        BuildClass.SetCapacity(cap);
-        return BuildClass;
+    def __init__(self,id,cap) -> None:
+        super().__init__(id);
+        self.__Capacity = cap;
+
     # ------------------------------
     def SetCapacity(self,cap):
         self.__Capacity = cap;

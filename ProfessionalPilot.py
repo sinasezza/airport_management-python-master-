@@ -3,17 +3,10 @@ from Pilot import Pilot;
 class ProfessionalPilot(Pilot):
     
     #default initializer
-    def __init__(self) -> None:
-        super().__init__()
-        self.__ProfessionalDegree = None;
-    # ----------------------------------
-    @classmethod
-    def ProfessionalPilot_main_Constructor(self,lname,id,age):
-        BuildClass = ProfessionalPilot();
-        BuildClass.LastName = lname;
-        BuildClass.IdentityCode = id;
-        BuildClass.Age=age;
-        return BuildClass;
+    def __init__(self,Lname,id,age,ProDegree) -> None:
+        super().__init__(Lname,id,age)
+        self.__ProfessionalDegree = ProDegree;
+    
     # ----------------------------------
     def GetProfessionalDegree(self):
         return self.__ProfessionalDegree;
